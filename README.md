@@ -20,6 +20,18 @@ flask --app app run
 
 If you encounter issues installing this in your terminal, it may be because pip is not installed. You can visit the following websites for installation guidance on [Windows](https://phoenixnap.com/kb/install-pip-windows) and [WSL](https://monovm.com/blog/how-to-install-pip-on-windows-linux/)
 
+You can also specify the environment variables in your Flask app by modifying the .flaskenv. It is important to create a .env file for your OpenAI secret key; you can find it [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-api-key)
+
+```bash
+// .flaskenv
+FLASK_ENV = development
+FLASK_APP = app.py
+FLASK_DEBUG = True
+
+// .env (create newfile)
+OPENAI_API_KEY = your secret key here
+```
+
 ### Issues
 
 If you're having trouble integrating this code into your machine, [open a new issue](https://github.com/kents00/Zert-Chat/issues). As this repository continues to develop, it will be easier for more developers to integrate updates and improve overall user performance!
